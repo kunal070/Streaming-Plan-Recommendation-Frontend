@@ -1,0 +1,115 @@
+
+.navbar {
+  background-color: #3b5998;
+  position: fixed; /* Ensures the navbar stays at the top */
+  width: 100%; 
+  z-index: 1000; /* Ensures the navbar stays on top of other elements */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns all items to the left */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  margin-right: 300px; /* Add spacing between the logo and the nav items */
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 25px; /* Equal spacing between all items */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers content within the item */
+  margin: 0; /* Ensures no extra spacing between items */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  display: flex;
+  align-items: center; /* Ensures the icon and text are aligned vertically */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-item.active .nav-link {
+  color: #dff9fb;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  color: #ffd700; /* Gold color for active links */
+  font-weight: bold;
+  border-bottom: 2px solid #ffd700; /* Underline for the active link */
+}
+
+.icon-logo {
+  width: 18px; /* Adjust size as needed */
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 4px;  /* Space between icon and text */
+  transition: 0.3s ease;
+}
+
+.nav-link img {
+  vertical-align: middle; /* Ensures icons align with text baseline */
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px; /* Increased font size */
+  cursor: pointer;
+  margin-left: 530px; /* Adjust this value to increase spacing */
+  margin-top: 2px;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: auto;
+  transform: translateX(-10px); /* Adjusts dropdown alignment */
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: left;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px; /* Slightly larger text for dropdown items */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

@@ -1,0 +1,220 @@
+/* General container styling */
+.web-crawler-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto; /* Centering the container */
+  border-radius: 8px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #333;
+  margin-top : 75px;
+}
+
+/* Search container styling */
+.search-container {
+  justify-content: center;
+  width: 100%;
+  max-width: 335px;
+  position: relative;
+  flex: 1; /* Let this section take up equal space */
+  display: flex; /* Maintain the button and input on the same line */
+  }
+
+.actio-container {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.input-container,
+.search-container {
+  flex: 1; /* Allows both containers to share available space equally */
+}
+
+/* Input styling */
+.search-input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  background-color: #334155;
+  color: #f8fafc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.search-input:focus {
+  background-color: #475569;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6.5px;
+  width: 50px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+  .search-button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.1);
+  }
+
+  .search-button:active {
+    transform: scale(0.95);
+  }
+
+.search-icon {
+  pointer-events: none;
+}
+
+/* Add responsive styling */
+@media (max-width: 768px) {
+  .search-container {
+      flex-direction: column;
+  }
+  .search-input {
+      width: 90%;
+      margin-bottom: 10px;
+  }
+  .search-button {
+      width: 90%;
+      border-radius: 8px;
+  }
+}
+
+/* Links container */
+.links-container {
+  margin-top: 20px;
+}
+
+.links-title {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.link-item {
+  margin-bottom: 8px;
+}
+
+.link-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link-item a:hover {
+  text-decoration: underline;
+}
+
+/* Keyword count table styling */
+.keyword-count-table {
+  width: 100%;
+  max-width: 1200px; /* Optional: limit maximum width of table */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.keyword-count-table th,
+.keyword-count-table td {
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  text-align: left;
+  word-break: break-word; /* Ensure long words break onto the next line */
+  overflow-wrap: anywhere; /* Ensure content wraps */
+  white-space: normal; /* Allow text to wrap */
+}
+
+.keyword-count-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  min-width: 100px; /* Minimum width for the link column */
+}
+
+.keyword-count-table td {
+  min-width: 50px; /* Minimum width for the link column */
+}
+
+.keyword-count-table td.keyword-count {
+  width: 125px; /* Fixed width for keyword count column */
+}
+
+.keyword-count-table a {
+  color: #007bff;
+  text-decoration: none;
+  word-break: break-word; /* Break long URLs in links */
+  overflow-wrap: anywhere; /* Ensure links wrap */
+  white-space: normal;
+}
+
+.keyword-count-table a:hover {
+  text-decoration: underline;
+}
+
+/* Additional table styling for readability */
+.keyword-count-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.keyword-count-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Crawled logo and keyword count logo */
+.crawled-logo, .keyword-logo {
+  font-size: 20px;
+  margin-left: 10px;
+  color: blue; /* default color */
+}
+
+.keyword-logo {
+  color: green; /* Adjusted color */
+}
+
+@media (max-width: 768px) {
+  .action-container {
+      flex-direction: column; /* Stack the sections vertically on smaller screens */
+      align-items: stretch; /* Stretch to fit screen width */
+  }
+}
+
+.up-logo{
+    width: 35px;
+    height: 30px;
+}
+
+
+.middle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 202px;
+}
