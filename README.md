@@ -2,7 +2,7 @@
 
 A modern React-based frontend for the Streamlyze streaming service analytics platform. This application provides an intuitive interface for comparing streaming plans, analyzing web content, and performing advanced text processing operations.
 
-> **Note**: This is the frontend repository. The backend API server can be found at: [Streamlyze Backend Repository]([https://github.com/your-username/streamlyze-backend](https://github.com/kunal070/Streaming-Plan-Recommendation-backend))
+> **Note**: This is the frontend repository. The backend API server can be found at: [Streamlyze Backend Repository]([https://github.com/kunal070/Streaming-Plan-Recommendation-backend])
 
 ## 🚀 Features
 
