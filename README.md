@@ -1,38 +1,51 @@
-# Streamlyze 🎬
+# Streamlyze Frontend 🎬
 
-A comprehensive streaming service analytics platform that helps users compare streaming plans, analyze web content, and perform various text processing operations.
+A modern React-based frontend for the Streamlyze streaming service analytics platform. This application provides an intuitive interface for comparing streaming plans, analyzing web content, and performing advanced text processing operations.
 
-## Features
+> **Note**: This is the frontend repository. The backend API server can be found at: [Streamlyze Backend Repository](https://github.com/your-username/streamlyze-backend)
 
-### 🎯 Core Features
-- **Plan Comparison**: Compare Netflix, Prime Video, and Disney+ subscription plans
-- **Best Plan Recommendation**: Get personalized recommendations based on price or video quality
-- **Web Crawler**: Crawl websites and analyze keyword frequency
-- **Text Extractor**: Extract URLs, emails, phone numbers, and dates from text files
-- **Page Ranking**: Search and rank pages based on keyword relevance
-- **Inverted Indexing**: Advanced search with spell-checking and auto-suggestions
+## 🚀 Features
 
-### 🛠 Technical Features
-- Modern React.js frontend with responsive design
-- RESTful API integration
-- File upload and processing capabilities
-- Real-time search suggestions
-- Pagination for large datasets
-- Loading states and error handling
+### 📊 Plan Comparison Interface
+- **Multi-Platform Comparison**: Interactive comparison of Netflix, Prime Video, Disney+, Discovery+, Paramount+, and YouTube plans
+- **Smart Recommendations**: User-friendly interface for AI-powered plan suggestions based on price or video quality
+- **Real-time Data Display**: Live visualization of scraped streaming service data
 
-## Tech Stack
+### 🕷️ Web Crawling Dashboard
+- **Crawler Interface**: Simple URL input for web crawling operations
+- **Keyword Analysis**: Interactive keyword frequency analysis across crawled pages
+- **Results Visualization**: Table-based display of crawling results and statistics
 
-- **Frontend**: React.js, React Router
-- **Styling**: CSS3 with custom animations
-- **HTTP Client**: Axios
-- **Backend API**: REST endpoints (running on localhost:8080)
+### 🔍 Advanced Search Components
+- **Search Interface**: Auto-suggestion enabled search with spell-checking
+- **Page Ranking Display**: Ranked search results with relevance scoring
+- **Inverted Indexing**: Fast search with detailed position-based results
+- **Pagination**: Efficient handling of large result sets
 
-## Installation
+### 🛠️ File Processing UI
+- **Drag & Drop Upload**: User-friendly file upload for text analysis
+- **Data Extraction Display**: Organized presentation of extracted URLs, emails, phone numbers, and dates
+- **Loading States**: Smooth user experience with loading indicators and error handling
 
+## 🏗️ Tech Stack
+
+- **React.js 18** - Modern component-based UI framework
+- **React Router** - Client-side routing and navigation
+- **Axios** - HTTP client for API communication
+- **CSS3** - Custom styling with animations and responsive design
+- **JavaScript ES6+** - Modern JavaScript features
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js 14+ and npm
+- Backend API server running on `http://localhost:8080`
+
+### Setup
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/streamlyze.git
-   cd streamlyze
+   git clone https://github.com/your-username/streamlyze-frontend.git
+   cd streamlyze-frontend
    ```
 
 2. **Install dependencies**
@@ -48,76 +61,102 @@ A comprehensive streaming service analytics platform that helps users compare st
 4. **Open your browser**
    Navigate to `http://localhost:3000`
 
-## API Requirements
+### Backend Requirement
+This frontend requires the Streamlyze backend API to be running on `http://localhost:8080`. 
+Please set up the backend server from: [Streamlyze Backend Repository](https://github.com/your-username/streamlyze-backend)
 
-The application requires a backend server running on `http://localhost:8080` with the following endpoints:
-
-- `/api/netflix/plans` - Netflix plans data
-- `/api/Prime/plans` - Prime Video plans data
-- `/api/Disney/plans` - Disney+ plans data
-- `/api/best/price` - Best plan by price
-- `/api/best/videoquality` - Best plan by video quality
-- `/crawl` - Web crawling functionality
-- `/api/analyze-file` - Text file analysis
-- `/api/page-ranking` - Page ranking algorithm
-- `/crawl/inverted-index` - Inverted index search
-
-## Usage
-
-### Plan Comparison
-1. Navigate to Netflix, Prime, or Disney+ sections to view available plans
-2. Compare features like price, video quality, and device support
-
-### Best Plan Finder
-1. Go to "Best Plan" section
-2. Choose your priority: Price or Video Quality
-3. Get personalized recommendations
-
-### Web Crawler
-1. Enter a URL in the Web Crawl section
-2. Crawl the website to extract links
-3. Search for specific keywords across crawled pages
-
-### Text Extractor
-1. Upload a `.txt` file
-2. Extract structured data like URLs, emails, phone numbers, and dates
-
-### Page Ranking & Search
-1. Enter keywords to search across indexed content
-2. Get ranked results based on relevance
-3. Use spell-check suggestions for better results
-
-## Project Structure
+## 🏗️ Project Structure
 
 ```
 src/
-├── components/          # React components
-│   ├── Navbar.js       # Navigation component
-│   ├── Netflix.js      # Netflix plans display
-│   ├── Prime.js        # Prime Video plans display
-│   ├── Disney.js       # Disney+ plans display
-│   ├── BestPlan.js     # Plan recommendation engine
-│   ├── Web.js          # Web crawler interface
-│   ├── TextExtract.js  # File analysis tool
-│   ├── Page.js         # Page ranking system
-│   └── Invert.js       # Inverted index search
-├── styles/             # CSS stylesheets
-├── App.js              # Main application component
-└── index.js            # Application entry point
+├── components/              # React components
+│   ├── Navbar.js           # Navigation component
+│   ├── Netflix.js          # Netflix plans display
+│   ├── Prime.js            # Prime Video plans display
+│   ├── Disney.js           # Disney+ plans display
+│   ├── BestPlan.js         # Plan recommendation interface
+│   ├── Web.js              # Web crawler interface
+│   ├── TextExtract.js      # File analysis interface
+│   ├── Page.js             # Page ranking interface
+│   ├── Invert.js           # Inverted index search
+│   └── Home.js             # Home page component
+├── styles/                 # CSS stylesheets
+│   ├── App.css             # Main app styles
+│   ├── Navbar.css          # Navigation styles
+│   ├── Netflix.css         # Netflix component styles
+│   ├── BestPlan.css        # Best plan component styles
+│   ├── Web.css             # Web crawler styles
+│   ├── Page.css            # Page ranking styles
+│   ├── Invert.css          # Inverted index styles
+│   ├── TextExtract.css     # Text extraction styles
+│   └── Loader.css          # Loading animation styles
+├── App.js                  # Main application component
+├── index.js                # Application entry point
+└── index.css               # Global styles
 ```
 
-## Features Overview
+## 🎯 Component Overview
 
-| Feature | Description | Status |
-|---------|-------------|--------|
-| Plan Comparison | Compare streaming service plans | ✅ Active |
-| Best Plan Finder | AI-powered plan recommendations | ✅ Active |
-| Web Crawler | Extract and analyze web content | ✅ Active |
-| Text Extractor | Parse structured data from files | ✅ Active |
-| Page Ranking | Search and rank content | ✅ Active |
-| Inverted Indexing | Advanced search with suggestions | ✅ Active |
+### Core Components
+| Component | Purpose | API Endpoints Used |
+|-----------|---------|-------------------|
+| **Netflix** | Display Netflix plans | `/api/netflix/plans` |
+| **Prime** | Display Prime Video plans | `/api/Prime/plans` |
+| **Disney** | Display Disney+ plans | `/api/Disney/plans` |
+| **BestPlan** | Plan recommendations | `/api/best/price`, `/api/best/videoquality` |
 
-## Contributing
+### Analysis Components
+| Component | Purpose | API Endpoints Used |
+|-----------|---------|-------------------|
+| **Web** | Web crawling interface | `/crawl`, `/api/netflix/keyword-frequency` |
+| **Page** | Page ranking search | `/api/page-ranking`, `/crawl/words` |
+| **Invert** | Inverted index search | `/crawl/inverted-index`, `/crawl/spell-checking` |
+| **TextExtract** | File analysis | `/api/analyze-file` |
+
+## 🔧 Key Features
+
+### Responsive Design
+- Mobile-first approach with responsive breakpoints
+- Flexible grid layouts for plan comparisons
+- Adaptive navigation for different screen sizes
+
+### User Experience
+- Loading states for all API calls
+- Error handling with user-friendly messages
+- Auto-suggestions for search inputs
+- Pagination for large datasets
+
+### Interactive Elements
+- Hover effects and smooth animations
+- Dynamic button states and selections
+- Real-time search suggestions
+- File upload with validation
+
+## 🎨 Styling Features
+
+- **Custom CSS Animations**: Smooth loader animations and hover effects
+- **Modern Color Schemes**: Streaming service themed colors
+- **Typography**: Clean, readable font choices
+- **Responsive Tables**: Mobile-friendly data display
+- **Interactive Cards**: Hover effects for plan comparisons
+
+## 🚀 Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
+
+## 🔗 API Integration
+
+All API calls are configured to connect to `http://localhost:8080`. The frontend handles:
+- Plan data fetching and display
+- File upload and processing
+- Search queries and results
+- Web crawling requests
+- Error handling and user feedback
+
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -125,16 +164,14 @@ src/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🔗 Related Repositories
 
-- React.js community for excellent documentation
-- Streaming services for plan data inspiration
-- Contributors and testers
+- **Backend API**: [Streamlyze Backend](https://github.com/your-username/streamlyze-backend)
 
 ---
 
-**Note**: Make sure your backend server is running on port 8080 before using the application features.
+**Note**: This frontend application requires the Streamlyze backend server to be running on port 8080 for full functionality. Please ensure both servers are running for complete features.
